@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1417790700}
   m_Layer: 0
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Capsule: {fileID: 0}
+  laser: {fileID: 2757206844310624051, guid: 4936fd2630fb86944a0e0d30cf01acbb, type: 3}
   laserSFX: {fileID: 0}
 --- !u!1 &1524945895
 GameObject:
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 1524945896}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 2045860507}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
