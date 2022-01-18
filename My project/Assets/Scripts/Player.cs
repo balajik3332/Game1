@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     float speed = 5f;
     [SerializeField]
-    GameObject Capsule;
-    GameObject newCapsule;
+    GameObject laser;
+    GameObject newlaser;
     int dir = 1; //-1
     [SerializeField]
     public AudioClip laserSFX;
@@ -62,11 +62,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
         {
-            GameObject Capsules = new GameObject("Capsule");
+            // GameObject Capsules = new GameObject("Capsule");
             // instantiate laser on top of spaceship position
-            Vector3 laserPos = transform.position;
-            laserPos.y = -3.2f;
-            newCapsule = Instantiate(Capsules, laserPos, transform.rotation) as GameObject;
+            Vector3 laserPos = pos;
+            laserPos.y = -0.5f;
+            // transform.Rotate(0.0f, 0.0f, 90.0f);
+            newlaser = Instantiate(laser, pos, transform.rotation) as GameObject;
 
             // play sound
             // playSound(laserSFX);

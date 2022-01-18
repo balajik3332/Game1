@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 10f;
     private Vector3 pos;
 
     private void Update()
@@ -18,6 +18,7 @@ public class Laser : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
+            Debug.Log(other);
             Destroy(gameObject);
         }
     }
