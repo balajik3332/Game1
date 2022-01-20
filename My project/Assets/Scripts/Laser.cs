@@ -9,17 +9,15 @@ public class Laser : MonoBehaviour
 
     private void Update()
     {
-        pos = transform.position;
-        pos.x += 1 * speed * Time.deltaTime;
-        transform.position = pos;
+       transform.Translate(new Vector3(2f*speed*Time.deltaTime,0,0));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
         {
-            Debug.Log(other);
             Destroy(gameObject);
         }
     }
 }
+
