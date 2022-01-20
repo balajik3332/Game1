@@ -65,9 +65,10 @@ public class Player : MonoBehaviour
             // GameObject Capsules = new GameObject("Capsule");
             // instantiate laser on top of spaceship position
             Vector3 laserPos = pos;
-            laserPos.y = -0.5f;
+            laserPos.x += 0.5f;
+            // laserPos.y -= 0.2f;
             // transform.Rotate(0.0f, 0.0f, 90.0f);
-            newlaser = Instantiate(laser, pos, transform.rotation) as GameObject;
+            newlaser = Instantiate(laser, laserPos, transform.rotation) as GameObject;
 
             // play sound
             // playSound(laserSFX);

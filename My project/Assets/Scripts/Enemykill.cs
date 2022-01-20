@@ -6,7 +6,7 @@ public class Enemykill : MonoBehaviour
 {
    Animator _animator;
     [SerializeField]
-    int enemyValue = 1;
+    // int enemyValue = 1;
 
     private void Awake()
     {
@@ -30,9 +30,11 @@ public class Enemykill : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(other.tag);
         if (other.tag == "Laser")
         {        
             // kill the alien
+            
             StartCoroutine(KillEnemy());
         }
     }
