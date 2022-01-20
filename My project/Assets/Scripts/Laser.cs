@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 15f;
     private Vector3 pos;
 
     private void Update()
     {
-        pos = transform.position;
-        pos.x += 1 * speed * Time.deltaTime;
-        transform.position = pos;
+        transform.Translate(new Vector3(2f * speed * Time.deltaTime, 0, 0));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Debug.Log(other.tag);
         if (other.tag == "Enemy")
         {
             Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }
+
